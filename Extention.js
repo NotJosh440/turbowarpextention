@@ -1,13 +1,18 @@
 class HelloWorld {
   getInfo() {
     return {
-      id: 'helloworld',
-      name: 'It works!',
+      id: 'Extention',
+      name: 'Extention',
       blocks: [
         {
-          opcode: 'hello',
+          opcode: 'negitive',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Hello!'
+          text: '-[NUMBER]!',
+          arguments: {
+            NUMBER: {
+              type: Scratch.ArgumentType.NUMBER
+            }
+          }
         }
       ]
     };
