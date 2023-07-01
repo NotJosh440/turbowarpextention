@@ -7,10 +7,11 @@ class HelloWorld {
         {
           opcode: 'negitive',
           blockType: Scratch.BlockType.REPORTER,
-          text: '-[NUMBER]!',
+          text: '-[NUMBER]',
           arguments: {
             NUMBER: {
-              type: Scratch.ArgumentType.NUMBER
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: '10'
             }
           }
         }
