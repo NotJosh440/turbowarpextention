@@ -15,16 +15,16 @@ class HelloWorld {
             }
           },
         },
-        {
-          opcode: "costumeNumberOfSprite",
-          blockType: Scratch.blockType.REPORTER,
-          text: "costume number of [SPRITE]",
-          arguments: {
-            SPRITE: {
-              type: Scratch.ArgumentType.STRING,
-            }
-          }
-        }
+        // {
+        //   opcode: "costumeNumberOfSprite",
+        //   blockType: Scratch.blockType.REPORTER,
+        //   text: "costume number of [SPRITE]",
+        //   arguments: {
+        //     SPRITE: {
+        //       type: Scratch.ArgumentType.STRING,
+        //     }
+        //   }
+        // }
       ]
     };
   }
@@ -32,11 +32,11 @@ class HelloWorld {
   negitive(args) {
     return args.NUMBER * -1;
   }
-  costumeNumberOfSprite(args){
-    let differentSprite = args.SPRITE;
-    let currentCostumeIndex = differentSprite.getCostumeIndex();
-    return currentCostumeIndex;
-  }
+  // costumeNumberOfSprite(args){
+  //   let differentSprite = args.SPRITE;
+  //   let currentCostumeIndex = differentSprite.getCostumeIndex();
+  //   return currentCostumeIndex;
+  // }
 }
 
 Scratch.extensions.register(new HelloWorld());
