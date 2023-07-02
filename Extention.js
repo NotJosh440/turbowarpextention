@@ -1,11 +1,3 @@
-(function(Scratch) {
-  'use strict';
-
-  if (!Scratch.extensions.unsandboxed) {
-    throw new Error('This Block Utility example must run unsandboxed');
-  }
-  const vm = Scratch.vm;
-
 class HelloWorld {
   getInfo() {
     return {
@@ -48,4 +40,3 @@ class HelloWorld {
 }
 
 Scratch.extensions.register(new HelloWorld());
-})(Scratch);
