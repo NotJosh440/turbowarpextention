@@ -15,16 +15,16 @@ class HelloWorld {
             }
           },
         },
-        // {
-        //   opcode: "costumeNumberOfSprite",
-        //   blockType: Scratch.blockType.REPORTER,
-        //   text: "costume number of [SPRITE]",
-        //   arguments: {
-        //     SPRITE: {
-        //       type: Scratch.ArgumentType.STRING,
-        //     }
-        //   }
-        // }
+        {
+          opcode: "costumeNumberOfSprite",
+          blockType: Scratch.blockType.REPORTER,
+          text: "costume number of [SPRITE]",
+          arguments: {
+            SPRITE: {
+              type: Scratch.ArgumentType.STRING,
+            }
+          }
+        }
       ]
     };
   }
