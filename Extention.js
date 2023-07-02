@@ -11,7 +11,7 @@ class HelloWorld {
           arguments: {
             NUMBER: {
               type: Scratch.ArgumentType.NUMBER,
-              defaultValue: '10'
+              defaultValue: '100'
             }
           },
         }
