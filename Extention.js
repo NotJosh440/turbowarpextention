@@ -1,3 +1,11 @@
+(function(Scratch) {
+  'use strict';
+
+  if (!Scratch.extensions.unsandboxed) {
+    throw new Error('This Block Utility example must run unsandboxed');
+  }
+  const vm = Scratch.vm;
+
 class HelloWorld {
   getInfo() {
     return {
@@ -14,14 +22,30 @@ class HelloWorld {
               defaultValue: '10'
             }
           },
+        },
+        {
+          opcode: "costumeNumberOfSprite",
+          blockType: Scratch.blockType.REPORTER,
+          text: "costume number of [SPRITE]",
+          arguments: {
+            SPRITE: {
+              type: Scratch.ArgumentType.STRING,
+            }
+          }
         }
       ]
     };
   }
 
-  negitive(NUMBER) {
-    return NUMBER.NUMBER * -1;
+  negitive(args) {
+    return args.NUMBER * -1;
+  }
+  costumeNumberOfSprite(args){
+    let differentSprite = args.SPRITE;
+    let currentCostumeIndex = differentSprite.getCostumeIndex();
+    return currentCostumeIndex;
   }
 }
 
 Scratch.extensions.register(new HelloWorld());
+})(Scratch);
