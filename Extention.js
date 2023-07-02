@@ -11,7 +11,7 @@ class HelloWorld {
           arguments: {
             NUMBER: {
               type: Scratch.ArgumentType.NUMBER,
-              defaultValue: '100'
+              defaultValue: '10'
             }
           },
         }
@@ -20,7 +20,7 @@ class HelloWorld {
   }
 
   negitive(NUMBER) {
-    return NUMBER*-1;
+    return NUMBER;
   }
 }
 
