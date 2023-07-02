@@ -13,14 +13,14 @@ class HelloWorld {
               type: Scratch.ArgumentType.NUMBER,
               defaultValue: '10'
             }
-          }
+          },
         }
       ]
     };
   }
 
-  hello() {
-    return 'World!';
+  negitive(NUMBER) {
+    return -NUMBER;
   }
 }
 
