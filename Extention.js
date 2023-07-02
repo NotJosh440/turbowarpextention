@@ -20,7 +20,7 @@ class HelloWorld {
   }
 
   negitive(NUMBER) {
-    return -NUMBER;
+    return NUMBER*-1;
   }
 }
 
