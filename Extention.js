@@ -17,7 +17,7 @@ class HelloWorld {
         },
         {
           opcode: "costumeNumberOfSprite",
-          blockType: Scratch.blockType.REPORTER,
+          blockType: Scratch.BlockType.REPORTER,
           text: "costume number of [SPRITE]",
           arguments: {
             SPRITE: {
@@ -29,14 +29,53 @@ class HelloWorld {
     };
   }
 
+  function (ext) {
+    // Block definition
+    ext.getCostumeInfo = function (spriteName) {
+      var sprite = Stage.sprite[spriteName];
+      if (!sprite) {
+        return null;
+      }
+  
+      var costume = sprite.costumes[sprite.currentCostumeIndex];
+      if (!costume) {
+        return null;
+      }
+  
+      var costumeInfo = {
+        name: costume.costumeName,
+        number: sprite.currentCostumeIndex + 1
+      };
+  
+      return costumeInfo;
+    };
+  
+    // Block metadata
+    var descriptor = {
+      blocks: [
+        ['r', 'costume name of %s', 'getCostumeInfo', 'Sprite1'],
+        ['r', 'costume number of %s', 'getCostumeInfo', 'Sprite1']
+      ]
+    };
+    // Block metadata
+    var descriptor = {
+      blocks: [
+        ['r', 'costume name of %s', 'getCostumeInfo', 'Sprite1'],
+        ['r', 'costume number of %s', 'getCostumeInfo', 'Sprite1']
+      ]
+    }
+  }
+  
+    // Register the extension
+
   negitive(args) {
     return args.NUMBER * -1;
   }
-  // costumeNumberOfSprite(args){
-  //   let differentSprite = args.SPRITE;
-  //   let currentCostumeIndex = differentSprite.getCostumeIndex();
-  //   return currentCostumeIndex;
-  // }
+  costumeNumberOfSprite(args){
+    let differentSprite = args.SPRITE;
+    let currentCostumeIndex = differentSprite.costumeNumber();
+    return currentCostumeIndex;
+  }
 }
 
-Scratch.extensions.register(new HelloWorld());
+Scratch.extensions.register(new HelloWorld(), descriptor, ext);
