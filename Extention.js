@@ -33,7 +33,7 @@ class HelloWorld {
     return args.NUMBER * -1;
   }
   costumeNumberOfSprite(args){
-    return args.SPRITE.costumeNumber();
+    return args.SPRITE.costumeNumber;
   }
 }
 
