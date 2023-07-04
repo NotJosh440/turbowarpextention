@@ -33,10 +33,8 @@ class HelloWorld {
     return args.NUMBER * -1;
   }
   costumeNumberOfSprite(args){
-    let differentSprite = args.SPRITE;
-    let currentCostumeIndex = differentSprite.costumeNumber();
-    return currentCostumeIndex;
-  }
+    return args.SPRITE.costumeNumber();
+ }
 }
 
 Scratch.extensions.register(new HelloWorld());
