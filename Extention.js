@@ -35,10 +35,10 @@ class HelloWorld {
 
   costumeNumberOfSprite(args) {
     const spriteName = args.SPRITE;
-    const sprite = Scratch.stage.getSpriteByName(spriteName);
+    const sprite = Stage.sprite[spriteName];
 
     if (sprite) {
-      const currentCostumeIndex = sprite.currentCostume;
+      const currentCostumeIndex = sprite.currentCostumeIndex;
       return currentCostumeIndex + 1;
     }
 
