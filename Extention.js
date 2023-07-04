@@ -35,10 +35,11 @@ class HelloWorld {
 
   costumeNumberOfSprite(args) {
     const spriteName = args.SPRITE;
-    const sprite = Stage.sprite[spriteName];
+    const stageTarget = this.runtime.getTargetForStage();
+    const sprite = stageTarget.getSpriteByName(spriteName);
 
     if (sprite) {
-      const currentCostumeIndex = sprite.currentCostumeIndex;
+      const currentCostumeIndex = sprite.getCurrentCostumeIndex();
       return currentCostumeIndex + 1;
     }
 
