@@ -34,7 +34,7 @@ class HelloWorld {
   }
   costumeNumberOfSprite(args){
     return args.SPRITE.costumeNumber();
- }
+  }
 }
 
 Scratch.extensions.register(new HelloWorld());
