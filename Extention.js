@@ -33,13 +33,23 @@ class HelloWorld {
     return -args.NUMBER;
   }
 
+  getSpriteByName(name) {
+    const targets = this.runtime.targets;
+    for (let i = 0; i < targets.length; i++) {
+      const target = targets[i];
+      if (target.sprite && target.sprite.name === name) {
+        return target.sprite;
+      }
+    }
+    return null;
+  }
+
   costumeNumberOfSprite(args) {
     const spriteName = args.SPRITE;
-    const stageTarget = this.runtime.getTargetForStage();
-    const sprite = stageTarget.getSpriteByName(spriteName);
+    const sprite = this.getSpriteByName(spriteName);
 
     if (sprite) {
-      const currentCostumeIndex = sprite.getCurrentCostumeIndex();
+      const currentCostumeIndex = sprite.currentCostumeIndex;
       return currentCostumeIndex + 1;
     }
 
