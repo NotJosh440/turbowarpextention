@@ -1,8 +1,8 @@
 class HelloWorld {
   getInfo() {
     return {
-      id: 'Extention',
-      name: 'Extention',
+      id: 'Extension',
+      name: 'Extension',
       blocks: [
         {
           opcode: 'negitive',
@@ -32,15 +32,15 @@ class HelloWorld {
           arguments: {
             INPUT: {
               type: Scratch.ArgumentType.NUMBER,
-              default: "2"
+              defaultValue: '2'
             },
             LOW: {
               type: Scratch.ArgumentType.NUMBER,
-              default: "1"
+              defaultValue: '1'
             },
             HIGH: {
               type: Scratch.ArgumentType.NUMBER,
-              default: "3"
+              defaultValue: '3'
             },
           }
         }
@@ -71,7 +71,7 @@ class HelloWorld {
       }
     }
   }
-  
+
 }
 
 Scratch.extensions.register(new HelloWorld());
