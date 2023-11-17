@@ -127,7 +127,7 @@ class GraphingExtension {
 
     ComplexPow(args){
         const result =  Complex(args.RONE, args.IONE).pow(args.RTWO, args.ITWO);
-        const formattedResult = `${result.re.toFixed(2)} + ${result.im.toFixed(2)}i`;
+        const formattedResult = `${result.re.toFixed()} + ${result.im.toFixed()}i`;
         return formattedResult;
     }
 }
