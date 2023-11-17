@@ -126,7 +126,9 @@ class GraphingExtension {
     }
 
     ComplexPow(args){
-        return Complex(args.RONE, args.IONE).pow(args.RTWO, args.ITWO);
+        const result =  Complex(args.RONE, args.IONE).pow(args.RTWO, args.ITWO);
+        const formattedResult = `${result.re.toFixed(2)} + ${result.im.toFixed(2)}i`;
+        return formattedResult;
     }
 }
 
