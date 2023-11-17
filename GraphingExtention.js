@@ -67,7 +67,7 @@ class GraphingExtension {
             },
             {
                 opcode: 'ComplexPow',
-                blockType: Scratch.blockType.REPORTER,
+                blockType: Scratch.BlockType.REPORTER,
                 text: 'complex [RONE][IONE] ^ [RTWO][ITWO]',
                 arguments:{
                     RONE: {
