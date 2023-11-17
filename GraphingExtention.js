@@ -83,6 +83,25 @@ class GraphingExtension {
                         type: Scratch.ArgumentType.NUMBER
                     }
                 }
+            },
+            {
+                opcode: 'ComplexAdd',
+                blockType: Scratch.BlockType.REPORTER,
+                text: 'complex [RONE][IONE] + [RTWO][ITWO]',
+                arguments:{
+                    RONE: {
+                        type: Scratch.ArgumentType.NUMBER
+                    },
+                    IONE: {
+                        type: Scratch.ArgumentType.NUMBER
+                    },
+                    RTWO: {
+                        type: Scratch.ArgumentType.NUMBER
+                    },
+                    ITWO: {
+                        type: Scratch.ArgumentType.NUMBER
+                    }
+                }
             }
         ]
         };
@@ -127,6 +146,12 @@ class GraphingExtension {
 
     ComplexPow(args){
         const result =  Complex(args.RONE, args.IONE).pow(args.RTWO, args.ITWO);
+        const formattedResult = `${result.re} + ${result.im}i`;
+        return formattedResult;
+    }
+
+    ComplexAdd(args){
+        const result =  Complex(args.RONE, args.IONE).add(args.RTWO, args.ITWO);
         const formattedResult = `${result.re} + ${result.im}i`;
         return formattedResult;
     }
